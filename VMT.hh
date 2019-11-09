@@ -19,7 +19,7 @@ public:
                               OldVMT{ nullptr } { }
 
     /* Delete post initialization. */
-    ~VMT_Hooking() noexcept(false)
+    ~VMT_Hooking() noexcept()
     {
         if (NewVMT)
         {
