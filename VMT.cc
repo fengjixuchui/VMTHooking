@@ -23,32 +23,29 @@
 static VMT_Hooking ClassAccessPoint;
 decltype(&Hooking::Example::Hooked) Hooking::Example::Original;
 
-/* Check the note for "Instance". */
-void *Instance;
+/* Check the note for "Instance".
+   Static is recommended to be
+   used for your actual instance
+   so you don't call it everytime.
+   The instance will always be
+   the same. 
+*/
+static void *Instance;
 
 /* Your entry point, to be called in the
    constructor / main thread.
 */
-void EntryPoint()
+void HookEntryPoint()
 {
-    try 
-    {
-        /* If Instance is initialized for ClassAccessPoint
-           apply the hook using the Example struct under the
-           index "1". */
-        Hook(
-            ClassAccessPoint,
-            Instance,
-            Hooking::Example,
-            1
-        );
-    }
-    catch (...)
-    {
-        /* If a C++ exception is caught we will
-           throw a runtime error. */
-        throw std::runtime_error("Error caught.");
-    }
+    /* If Instance is initialized for ClassAccessPoint
+       apply the hook using the Example struct under the
+       index "1". */
+    Hook(
+        ClassAccessPoint,
+        Instance,
+        Hooking::Example,
+        1
+    );
 }
 
 /* Example of how to do a hook. */
