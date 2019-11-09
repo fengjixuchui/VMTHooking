@@ -7,7 +7,11 @@
    to give out an example to what you have to do
    in order to run this on your project.
    
-   Credit for this project: Cristei Gabriel-Marian.
+   Credit for this project: Cristei Gabriel-Marian; 
+   Laxol; The UC Community as a whole; 
+   GuidedHacking's community as a whole; 
+   everyone who I talked to within the time of writing 
+   this class.
    Licensed under the MIT license, to be used under
    your will if the credits are provided. Market
    use will not be supported on the GIT repository,
