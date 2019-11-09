@@ -19,8 +19,8 @@ namespace Hooking
 {
     struct Example
     {
-        using Func = void(void *);
-        static Func Hooked;       /* Name used in "VMT.hh" */
-        static Func *Original;    /* Name used in "VMT.hh" */
+        using Func = void(void *); /* Datatype(Argument Datatypes)
+        static Func Hooked;        /* Name used in "VMT.hh" */
+        static Func *Original;     /* Name used in "VMT.hh" */
     };
 }
